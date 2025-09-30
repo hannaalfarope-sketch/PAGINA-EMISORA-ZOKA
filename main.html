@@ -1,23 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoka Radio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emisora Online</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+  
+    nav {
+      background: #111;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f04;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f04;
+    }
+
+    
+    header {
+      background: url('https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    header .btn {
+      background: #f04;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    header .btn:hover {
+      background: #c03;
+    }
+
+    
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenidos a Zoka Radio</h1>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-             <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="piepagina.html">Pie de Página</a></li>
-         
-        </ul>
-    </nav>
+  
+  <nav>
+    <div class="logo">Zoka Radio</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contáctenos</a></li>
+    </ul>
+  </nav>
+
+  
+  <header id="inicio">
+    <h1>Bienvenidos a Zoka Radio</h1>
+    <p>Tu música online, siempre contigo</p>
+    <a href="#nosotros" class="btn">Conócenos más</a>
+  </header>
+
+  
+  <section>
+    <h2>¿Qué es Zoka Radio?</h2>
+    <p>
+      Somos una emisora en línea dedicada a llevarte lo mejor de la música 
+      y la cultura radial. Nuestro compromiso es ofrecer entretenimiento, 
+      información y conexión con la comunidad.
+    </p>
+  </section>
+
 </body>
 </html>
+
 
