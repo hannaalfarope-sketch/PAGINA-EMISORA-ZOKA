@@ -1,0 +1,25 @@
+<section id="nosotros" style="padding:50px 20px; background-color:#f4f6f9; font-family:'Segoe UI', Arial, sans-serif;">
+    <h2 style="text-align:center; color:#003366; font-size:2em; margin-bottom:40px; text-transform:uppercase;">
+        Nosotros
+    </h2>
+
+    <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:flex-start; max-width:1100px; margin:auto;">
+
+        <div style="background:white; border-radius:12px; padding:25px; flex:1 1 300px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h3 style="color:#0055a5; margin-top:0;">¿Quiénes somos?</h3>
+            <p style="line-height:1.6; color:#333;">
+                Somos un equipo apasionado por la radio, comprometidos con ofrecer a nuestros oyentes
+                lo mejor en música, cultura y entretenimiento. Nuestro objetivo es conectar con la comunidad
+                y acompañar a cada persona con contenidos frescos, cercanos e innovadores.
+            </p>
+        </div>
+
+        <div style="background:white; border-radius:12px; padding:25px; flex:1 1 300px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h3 style="color:#0055a5; margin-top:0;">Misión</h3>
+            <p style="line-height:1.6; color:#333;">
+                Brindar una programación diversa que informe, entretenga e inspire a nuestros oyentes,
+                fomentando la cultura y la integración de la comunidad a través de contenidos de calidad.
+            </p>
+        </div>
+
+        <div style="background:white; border-radius:12px; padding:25px; flex:1 1 300px; box-shadow:0 4px 12px rgb
