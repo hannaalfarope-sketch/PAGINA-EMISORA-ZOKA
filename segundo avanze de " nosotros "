@@ -5,37 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoka Radio - Nosotros</title>
     <style>
-        
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #fff3cd, #ffca3a, #ff595e);
-            background-attachment: fixed;
+            background-color: #fff3cd; /* Fondo plano */
             color: #222;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        
-        body::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png');
-            opacity: 0.3;
-            z-index: 0;
         }
 
         /* Encabezado */
         header {
-            background-color: rgba(255,255,255,0.95);
+            background-color: #ffca3a;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         header img {
@@ -56,7 +40,7 @@
             color: #ff595e;
             font-weight: bold;
             font-size: 1.1em;
-            background: #fff3cd;
+            background: #fff;
             padding: 10px 20px;
             border-radius: 30px;
             transition: all 0.3s ease;
@@ -73,12 +57,10 @@
         section {
             max-width: 1100px;
             margin: 60px auto;
-            background-color: rgba(255, 255, 255, 0.97);
+            background-color: #fff;
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
         section h2 {
@@ -102,7 +84,7 @@
             border-radius: 15px;
             padding: 25px;
             flex: 1 1 300px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
@@ -141,12 +123,10 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(255,255,255,0.95);
+            background: #ffca3a;
             color: #333;
             margin-top: 40px;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -171,26 +151,27 @@
             <div class="caja">
                 <h3>¿Quiénes somos?</h3>
                 <p>
-                    En <strong>Zoka Radio</strong> somos una emisora digital con energía positiva,
-                    enfocada en transmitir alegría, cultura y buena música a toda la comunidad.
-                    Promovemos el talento local y fortalecemos el vínculo entre los oyentes y su entorno.
+                    En <strong>Zoka Radio</strong> somos una emisora digital llena de energía positiva,
+                    dedicada a compartir alegría, cultura y buena música. Nuestro propósito es
+                    conectar con las personas y promover el talento local a través de la radio online.
                 </p>
             </div>
 
             <div class="caja">
                 <h3>Misión</h3>
                 <p>
-                    Ofrecer una programación de calidad que eduque, entretenga e inspire, a través de
-                    contenidos diversos que reflejen los valores de respeto, inclusión y creatividad.
-                    Buscamos acompañar cada momento con buena vibra y autenticidad.
+                    Brindar contenido variado y entretenido que inspire, eduque y conecte,
+                    fomentando valores de respeto, inclusión y creatividad. Buscamos acompañarte
+                    con la mejor música y una vibra única.
                 </p>
             </div>
 
             <div class="caja">
                 <h3>Visión</h3>
                 <p>
-                    Convertirnos en la emisora digital líder del país, reconocida por su innovación,
-                    compromiso social y pasión por la música, marcando una nueva era en la comunicación digital.
+                    Ser reconocidos como una emisora digital líder en el país,
+                    innovadora y comprometida con su audiencia, expandiendo nuestras fronteras
+                    a nivel internacional con un sello de alegría y originalidad.
                 </p>
             </div>
 
@@ -209,7 +190,7 @@
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        © 2025 Zoka Radio | Inspirando con buena energía 🎶 | Grupo 2
+        © 2025 Zoka Radio | Inspirando buena energía 🎶 | Grupo 2
     </footer>
 
 </body>
