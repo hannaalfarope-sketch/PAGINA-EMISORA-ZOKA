@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png">
 
   <style>
-    
     body {
       font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
@@ -16,41 +15,105 @@
     }
 
     
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    
+    header {
+      background: url('https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    header .btn {
+      background: #f04;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    header .btn:hover {
+      background: #c03;
+    }
+
+    
     .contacto {
       position: relative;
       padding: 70px 20px;
       text-align: center;
       overflow: hidden;
-      background-color: #f7f4ff;
+      background: linear-gradient(135deg, #0b1b3a, #2a3b6a, #5a1f3d);
+      color: #fff;
     }
 
-    
     .fondocolor {
       position: absolute;
       inset: 0;
       z-index: 0;
-      background-image: 
-        linear-gradient(45deg,
-          #ff0000 0 20%,
-          #ffcc00 20% 40%,
-          #0057ff 40% 60%,
-          #ff0000 60% 80%,
-          #ffcc00 80% 100%);
-      background-size: cover;
-      opacity: 0.45;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1), transparent 70%),
+                  radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1), transparent 70%);
+      opacity: 0.2;
     }
 
-    
     .contacto h1 {
-      color: #000;
+      color: #fff;
       font-size: 2.8em;
       margin-bottom: 40px;
       position: relative;
       z-index: 1;
-      text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.9);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     }
 
-    
     .contenedor {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -61,7 +124,6 @@
       z-index: 1;
     }
 
-    
     .caja {
       border-radius: 20px;
       padding: 25px;
@@ -72,17 +134,16 @@
     }
 
     
-    .caja:nth-child(1) { background: #ff0000; } 
-    .caja:nth-child(2) { background: #ffcc00; color: #000; } 
-    .caja:nth-child(3) { background: #0057ff; }
-    .caja:nth-child(4) { background: #ff0000; } 
+    .caja:nth-child(1) { background: #e63946; } 
+    .caja:nth-child(2) { background: #f1faee; color: #111; } 
+    .caja:nth-child(3) { background: #457b9d; }
+    .caja:nth-child(4) { background: #1d3557; } 
 
     .caja:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
-    
     .caja h2 {
       background: rgba(255, 255, 255, 0.8);
       color: #000;
@@ -94,7 +155,6 @@
       font-weight: bold;
     }
 
-    
     .caja p {
       font-size: 1.1em;
       line-height: 1.6;
@@ -106,13 +166,12 @@
       font-weight: bold;
     }
 
-    .caja:nth-child(2) a { color: #000; } 
+    .caja:nth-child(2) a { color: #000; }
 
     a:hover {
       opacity: 0.8;
     }
 
-    
     .mapa iframe {
       width: 100%;
       height: 220px;
@@ -124,24 +183,43 @@
 </head>
 
 <body>
-  <section class="contacto">
-    <div class="fondocolor"></div>
 
+ 
+  <nav>
+    <div class="logo">Zoka Radio</div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contáctenos</a></li>
+    </ul>
+  </nav>
+
+  
+  <header id="inicio">
+    <h1>Bienvenidos a Zoka Radio</h1>
+    <p>Tu música online, siempre contigo</p>
+    <a href="nosotros.html" class="btn">Conócenos más</a>
+  </header>
+
+  
+  <section class="contacto" id="contacto">
+    <div class="fondocolor"></div>
     <h1>Contáctenos</h1>
 
     <div class="contenedor">
       <div class="caja">
-        <h2> Llámanos:</h2>
+        <h2>Llámanos:</h2>
         <p>3184890248</p>
       </div>
 
       <div class="caja">
-        <h2> Visítanos:</h2>
+        <h2>Visítanos:</h2>
         <p>Barrio El Centro,<br>Campoalegre - Huila</p>
       </div>
 
       <div class="caja">
-        <h2> Escríbenos:</h2>
+        <h2>Escríbenos:</h2>
         <p>
           <a href="mailto:Pautas@Zokaradio.com">Pautas@Zokaradio.com</a><br>
           <a href="mailto:MercadeoLukas@ZokaRadio.com">MercadeoLukas@ZokaRadio.com</a>
@@ -149,12 +227,14 @@
       </div>
 
       <div class="caja mapa">
-        <h2> Maps:</h2>
+        <h2>Maps:</h2>
         <iframe 
           src="https://www.google.com/maps?q=Campoalegre%20Huila&output=embed" 
           loading="lazy"></iframe>
       </div>
     </div>
   </section>
+
 </body>
 </html>
+
