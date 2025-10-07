@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contáctenos - Zoka Radio</title>
+  <title>Zoka Radio - Contáctenos</title>
   <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png">
 
   <style>
@@ -14,7 +14,7 @@
       overflow-x: hidden;
     }
 
-    
+  
     nav {
       display: flex;
       justify-content: space-between;
@@ -47,6 +47,7 @@
       color: #fff;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav ul li a:hover {
@@ -64,6 +65,7 @@
     header h1 {
       font-size: 3rem;
       margin-bottom: 10px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     header p {
@@ -72,7 +74,7 @@
     }
 
     header .btn {
-      background: #f04;
+      background: #e63946;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -83,7 +85,7 @@
     }
 
     header .btn:hover {
-      background: #c03;
+      background: #c02633;
     }
 
     
@@ -133,7 +135,6 @@
       font-weight: 500;
     }
 
-    
     .caja:nth-child(1) { background: #e63946; } 
     .caja:nth-child(2) { background: #f1faee; color: #111; } 
     .caja:nth-child(3) { background: #457b9d; }
@@ -179,12 +180,74 @@
       border-radius: 15px;
       margin-top: 10px;
     }
+
+    /* 🔹 FOOTER */
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 50px 20px 20px;
+      text-align: center;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 20px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #ffcc00;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
- 
+  
   <nav>
     <div class="logo">Zoka Radio</div>
     <ul>
@@ -235,6 +298,42 @@
     </div>
   </section>
 
+  
+  <footer>
+    <div class="footer-container">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" width="200" height="200" alt="Logo Zoka Radio">
+
+      <div class="footer-section">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contáctanos</h3>
+        <p>Email: contacto@zokaradio.com</p>
+        <p>Tel: +57 3184890248</p>
+        <p>Dirección: Barrio el centro, Campoalegre - Huila</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <a href="https://facebook.com">Facebook</a> | 
+        <a href="https://instagram.com">Instagram</a> | 
+        <a href="https://tiktok.com">TikTok</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Zoka Radio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
+
+
 
