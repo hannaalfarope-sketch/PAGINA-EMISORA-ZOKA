@@ -1,136 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emisora Online</title>
+  <meta charset="utf-8" />
+  <title>Galería - ZokaRadio</title>
   <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png">
-  <style>
-   
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
+  <style>
+    /* Estilo general */
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      text-align: center;
+      background-color: #0a0a0a;
+      color: white;
+      margin: 0;
+      padding: 0;
     }
 
-  
-    nav {
-      background: #111;
-      color: #fff;
+    h1 {
+      margin-top: 20px;
+      font-size: 2.2em;
+      color: #ff004f;
+    }
+
+    /* Carrusel */
+    .carrusel {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 0, 79, 0.6);
+    }
+
+    .slides {
+      display: flex;
+      width: 200%;
+      animation: slide 8s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Animación del carrusel */
+    @keyframes slide {
+      0%   { transform: translateX(0%); }
+      45%  { transform: translateX(0%); }
+      50%  { transform: translateX(-50%); }
+      95%  { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+
+    /* Pie de página */
+    footer {
+      margin-top: 40px;
       padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      font-size: 0.9em;
+      color: #ccc;
     }
 
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #f04;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
+    footer a {
+      color: #ff004f;
       text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s ease;
     }
 
-    nav ul li a:hover {
-      color: #f04;
-    }
-
-    
-    header {
-      background: url('https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    header .btn {
-      background: #f04;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    header .btn:hover {
-      background: #c03;
-    }
-
-    
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    section h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    section p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #555;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
+  <h1>Galería</h1>
+  <p>Fotos o imágenes relevantes:</p>
 
-  
-  <nav>
-    <div class="logo">Zoka Radio</div>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contáctenos</a></li>
-    </ul>
-  </nav>
+  <!-- Carrusel -->
+  <div class="carrusel">
+    <div class="slides">
+      <img src="../assets/img/foto1.jpg" alt="Foto 1 - ZokaRadio">
+      <img src="../assets/img/foto2.jpg" alt="Foto 2 - ZokaRadio">
+    </div>
+  </div>
 
-  
-  <header id="inicio">
-    <h1>Bienvenidos a Zoka Radio</h1>
-    <p>Tu música online, siempre contigo</p>
-    <a href="#nosotros" class="btn">Conócenos más</a>
-  </header>
+  <p><a href="../index.html" style="color:#ff004f;">Volver al menú principal</a></p>
 
-  
-  <section>
-    <h2>¿Qué es Zoka Radio?</h2>
-    <p>
-      Somos una emisora en línea dedicada a llevarte lo mejor de la música 
-      y la cultura radial. Nuestro compromiso es ofrecer entretenimiento, 
-      información y conexión con la comunidad.
-    </p>
-  </section>
-
+  <footer>
+    <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
