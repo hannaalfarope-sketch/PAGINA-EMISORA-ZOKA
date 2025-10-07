@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoka Radio - Nosotros</title>
     <style>
-        /* Fondo general con textura */
+        
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -16,7 +16,7 @@
             overflow-x: hidden;
         }
 
-        /* Efecto de ondas de radio */
+        
         body::before {
             content: "";
             position: absolute;
