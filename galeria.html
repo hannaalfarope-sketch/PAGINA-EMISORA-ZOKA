@@ -1,25 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <title>Galería - ZokaRadio</title>
-  <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería - Zoka Radio</title>
+  <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png" />
 
   <style>
     /* Estilo general */
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #0a0a0a;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0a0a0a;
       color: white;
       margin: 0;
       padding: 0;
     }
 
-    h1 {
-      margin-top: 20px;
-      font-size: 2.2em;
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      color: #fff;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
       color: #ff004f;
+    }
+
+    /* CONTENIDO GALERÍA */
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      color: #ff004f;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1em;
     }
 
     /* Carrusel */
@@ -30,7 +74,7 @@
       margin: 40px auto;
       overflow: hidden;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 0, 79, 0.6);
+      box-shadow: 0 0 20px rgba(255, 0, 79, 0.6);
     }
 
     .slides {
@@ -42,6 +86,7 @@
     .slides img {
       width: 100%;
       height: auto;
+      border-radius: 15px;
     }
 
     /* Animación del carrusel */
@@ -53,42 +98,120 @@
       100% { transform: translateX(0%); }
     }
 
-    /* Pie de página */
+    /* FOOTER */
     footer {
-      margin-top: 40px;
-      padding: 15px;
-      font-size: 0.9em;
-      color: #ccc;
+      background: #000;
+      color: white;
+      padding: 40px 20px;
     }
 
-    footer a {
-      color: #ff004f;
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      text-align: left;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-container img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    .footer-section h3 {
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-section a {
+      color: white;
       text-decoration: none;
+      transition: color 0.3s;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .footer-section a:hover {
+      color: #ff004f;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">Zoka Radio</div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contáctenos</a></li>
+    </ul>
+  </nav>
+
+  <!-- GALERÍA -->
   <h1>Galería</h1>
   <p>Fotos o imágenes relevantes:</p>
 
-  <!-- Carrusel -->
   <div class="carrusel">
     <div class="slides">
-      <img src="../assets/img/foto1.jpg" alt="Foto 1 - ZokaRadio">
-      <img src="../assets/img/foto2.jpg" alt="Foto 2 - ZokaRadio">
+      <img src="../assets/img/foto1.jpg" alt="Foto 1 - Zoka Radio" />
+      <img src="../assets/img/foto2.jpg" alt="Foto 2 - Zoka Radio" />
     </div>
   </div>
 
-  <p><a href="../index.html" style="color:#ff004f;">Volver al menú principal</a></p>
-
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+    <div class="footer-container">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio" />
+
+      <div class="footer-section">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contáctanos</h3>
+        <p>Email: contacto@zokaradio.com</p>
+        <p>Tel: +57 3184890248</p>
+        <p>Dirección: Barrio el centro, Campoalegre - Huila</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <a href="https://facebook.com">Facebook</a> | 
+        <a href="https://instagram.com">Instagram</a> | 
+        <a href="https://tiktok.com">TikTok</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Zoka Radio. Todos los derechos reservados.
+    </div>
   </footer>
+
 </body>
 </html>
-
