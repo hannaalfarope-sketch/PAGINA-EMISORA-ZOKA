@@ -1,197 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoka Radio - Nosotros</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #fff3cd; /* Fondo plano */
-            color: #222;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🧠 Metadatos SEO -->
+  <meta name="description" content="Zoka Radio - Emisora online que inspira con música, cultura y energía positiva. Conéctate y siente la energía Zoka.">
+  <meta name="author" content="Zoka Radio">
+  
+  <!-- 🎨 Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+  
+  <!-- 🔗 Ícono -->
+  <link rel="icon" type="image/png" href="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png">
+  
+  <title>Zoka Radio - Nosotros</title>
 
-        /* Encabezado */
-        header {
-            background-color: #ffca3a;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        header img {
-            height: 85px;
-            margin-bottom: 10px;
-        }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+      color: #333;
+    }
 
-        /* Menú */
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+    /* NAV */
+    nav {
+      background: #111;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #ff595e;
-            font-weight: bold;
-            font-size: 1.1em;
-            background: #fff;
-            padding: 10px 20px;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff007a;
+    }
 
-        nav a:hover {
-            background: #ff595e;
-            color: #fff;
-            transform: scale(1.08);
-        }
+    nav .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
 
-        /* Sección principal */
-        section {
-            max-width: 1100px;
-            margin: 60px auto;
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
 
-        section h2 {
-            text-align: center;
-            color: #ff595e;
-            font-size: 2.4em;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-        .contenido {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
+    nav ul li a:hover { color: #ff007a; }
 
-        .caja {
-            background-color: #fff7e6;
-            border-radius: 15px;
-            padding: 25px;
-            flex: 1 1 300px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
+    /* ENCABEZADO */
+    header {
+      background: linear-gradient(90deg, rgba(255,0,122,0.8), rgba(255,102,0,0.8)),
+                  url('https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+    }
 
-        .caja:hover {
-            transform: scale(1.05);
-        }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+    }
 
-        .caja h3 {
-            color: #f77f00;
-            margin-top: 0;
-            text-align: center;
-        }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
 
-        .caja p {
-            color: #333;
-            line-height: 1.6;
-            text-align: justify;
-        }
+    /* SECCIÓN NOSOTROS */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    section::before {
+      content: "";
+      background: url('https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png') repeat;
+      opacity: 0.05;
+      top: 0; left: 0; right: 0; bottom: 0;
+      position: absolute;
+      z-index: 0;
+      background-size: 200px;
+    }
 
-        ul li {
-            background: #ff595e;
-            color: white;
-            margin: 8px 0;
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-        }
+    section * {
+      position: relative;
+      z-index: 1;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #ffca3a;
-            color: #333;
-            margin-top: 40px;
-            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    section h2 {
+      font-size: 2.5rem;
+      color: #ff007a;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      font-weight: 900;
+    }
+
+    .contenedor-nosotros {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .tarjeta {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      flex: 1 1 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .tarjeta h3 {
+      color: #ff6600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .tarjeta p {
+      text-align: justify;
+    }
+
+    .valores ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .valores ul li {
+      background: #ff007a;
+      color: white;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer .logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-bottom: 15px;
+    }
+
+    footer img {
+      width: 100px;
+      transition: transform 0.3s;
+    }
+
+    footer img:hover {
+      transform: scale(1.1);
+    }
+
+    footer p {
+      color: #aaa;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- ENCABEZADO -->
-    <header>
-        <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="galeria.html">Galería</a>
-            <a href="contacto.html">Contáctanos</a>
-        </nav>
-    </header>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo principal de Zoka Radio">
+      Zoka Radio
+    </div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
 
-    <!-- SECCIÓN NOSOTROS -->
-    <section id="nosotros">
-        <h2>Nosotros</h2>
-        <div class="contenido">
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>Conoce a Zoka Radio</h1>
+    <p>Pasión, energía y conexión con nuestra audiencia 🎧</p>
+  </header>
 
-            <div class="caja">
-                <h3>¿Quiénes somos?</h3>
-                <p>
-                    En <strong>Zoka Radio</strong> somos una emisora digital llena de energía positiva,
-                    dedicada a compartir alegría, cultura y buena música. Nuestro propósito es
-                    conectar con las personas y promover el talento local a través de la radio online.
-                </p>
-            </div>
+  <!-- SECCIÓN NOSOTROS -->
+  <section id="nosotros">
+    <h2>Nosotros</h2>
+    <div class="contenedor-nosotros">
 
-            <div class="caja">
-                <h3>Misión</h3>
-                <p>
-                    Brindar contenido variado y entretenido que inspire, eduque y conecte,
-                    fomentando valores de respeto, inclusión y creatividad. Buscamos acompañarte
-                    con la mejor música y una vibra única.
-                </p>
-            </div>
+      <article class="tarjeta">
+        <h3>¿Quiénes somos?</h3>
+        <p>Somos una emisora online creada para inspirar, entretener e informar a través de la música, la cultura y el talento local. En Zoka Radio creemos en el poder de la comunicación para conectar comunidades.</p>
+      </article>
 
-            <div class="caja">
-                <h3>Visión</h3>
-                <p>
-                    Ser reconocidos como una emisora digital líder en el país,
-                    innovadora y comprometida con su audiencia, expandiendo nuestras fronteras
-                    a nivel internacional con un sello de alegría y originalidad.
-                </p>
-            </div>
+      <article class="tarjeta">
+        <h3>Misión</h3>
+        <p>Brindar contenidos radiales de calidad que fomenten la participación ciudadana, la creatividad y la alegría, usando la tecnología como medio para llegar a todo el mundo.</p>
+      </article>
 
-            <div class="caja">
-                <h3>Valores</h3>
-                <ul>
-                    <li>Compromiso</li>
-                    <li>Pasión</li>
-                    <li>Respeto</li>
-                    <li>Creatividad</li>
-                    <li>Innovación</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      <article class="tarjeta">
+        <h3>Visión</h3>
+        <p>Ser una emisora reconocida por su energía positiva y su compromiso con la comunidad, expandiendo nuestras fronteras para convertirnos en un referente de innovación digital y cultural.</p>
+      </article>
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        © 2025 Zoka Radio | Inspirando buena energía 🎶 | Grupo 2
-    </footer>
+      <article class="tarjeta valores">
+        <h3>Valores</h3>
+        <ul>
+          <li>Compromiso</li>
+          <li>Pasión</li>
+          <li>Creatividad</li>
+          <li>Respeto</li>
+          <li>Innovación</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logos">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio color fucsia">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio versión blanca">
+    </div>
+    <p>© 2025 Zoka Radio | Grupo 2 - Sección “Nosotros” | Inspirando buena energía 🎶</p>
+  </footer>
 
 </body>
 </html>
+
