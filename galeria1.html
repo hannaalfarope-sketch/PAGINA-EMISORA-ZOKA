@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería - Zoka Radio</title>
+  <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff004f;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff004f;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      color: #ff004f;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1em;
+      color: #ccc;
+    }
+
+    /* CARRUSEL */
+    .carrusel {
+      position: relative;
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 79, 0.6);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    #prev {
+      left: 15px;
+    }
+
+    #next {
+      right: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      text-align: left;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-container img {
+      max-width: 180px;
+    }
+
+    .footer-section h3 {
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 6px;
+    }
+
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #ff004f;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Zoka Radio</div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contáctenos</a></li>
+    </ul>
+  </nav>
+
+  <h1>Galería</h1>
+  <p>Revive nuestros mejores momentos en Zoka Radio 📸</p>
+
+  <div class="carrusel">
+    <div class="slides" id="slides">
+      <img src="https://i.imgur.com/jQj5oBu.jpeg" alt="Cabina de radio Zoka" />
+      <img src="https://i.imgur.com/Fwhw26A.jpeg" alt="Emisora Zoka Radio" />
+      <img src="https://i.imgur.com/Khql7Hi.jpeg" alt="Micrófono y estudio" />
+      <img src="https://i.imgur.com/1ykZlce.jpeg" alt="Ambiente musical" />
+    </div>
+    <button class="btn" id="prev">&#10094;</button>
+    <button class="btn" id="next">&#10095;</button>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio" />
+
+      <div class="footer-section">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contáctanos</h3>
+        <p>Email: contacto@zokaradio.com</p>
+        <p>Tel: +57 3184890248</p>
+        <p>Dirección: Barrio El Centro, Campoalegre - Huila</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <a href="https://facebook.com">Facebook</a> | 
+        <a href="https://instagram.com">Instagram</a> | 
+        <a href="https://tiktok.com">TikTok</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Zoka Radio. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const images = document.querySelectorAll('#slides img');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let index = 0;
+
+    function showSlide(i) {
+      index = (i + images.length) % images.length;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    prev.addEventListener('click', () => showSlide(index - 1));
+    next.addEventListener('click', () => showSlide(index + 1));
+
+    // Carrusel automático
+    setInterval(() => showSlide(index + 1), 4000);
+  </script>
+
+</body>
+</html>
