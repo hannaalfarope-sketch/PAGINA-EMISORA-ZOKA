@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png">
   <title>Emisora Online - Zoka Radio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -26,19 +29,30 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
 
     nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 1.8rem;
       font-weight: bold;
       color: #ff007a;
       letter-spacing: 1px;
     }
 
+    nav .logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
+      transition: all 0.3s ease;
     }
 
     nav ul li a {
@@ -50,6 +64,60 @@
 
     nav ul li a:hover {
       color: #ff007a;
+    }
+
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        transform: translateY(-500px);
+        opacity: 0;
+      }
+
+      nav ul.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
     }
 
     
@@ -69,13 +137,26 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 15px;
-      text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+      color: #ff007a;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      margin-top: 10px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
     }
 
     header p {
       font-size: 1.4rem;
       font-weight: 500;
-      margin-bottom: 25px;
+      margin: 20px 0 25px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
 
@@ -121,7 +202,7 @@
       color: #555;
     }
 
-    
+    /* 🔸 FOOTER */
     footer {
       background: #111;
       color: white;
@@ -136,6 +217,17 @@
       justify-content: center;
       gap: 40px;
       margin-bottom: 20px;
+    }
+
+    footer .footer-container img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    footer .footer-container img:hover {
+      transform: scale(1.1);
     }
 
     footer .footer-section h3 {
@@ -163,19 +255,28 @@
       padding-top: 10px;
       color: #aaa;
     }
-
   </style>
 </head>
 <body>
 
   
   <nav>
-    <div class="logo">Zoka Radio</div>
+    <div class="logo">
+      <img src="imagenes/LOGO-ZOKA-HEYDER.png" alt="Logo principal de Zoka Radio">
+      Zoka Radio
+    </div>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contáctenos</a></li>
+      <li><a href="main.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contactenos.html">Contáctenos</a></li>
     </ul>
   </nav>
 
@@ -183,7 +284,7 @@
   <header id="inicio">
     <h1>🎧 ¡Bienvenido a ZOKA RADIO! 🔥</h1>
     <p>La frecuencia que vibra contigo 🎶 — Música, energía y conexión sin límites 🌎</p>
-    <a href="#nosotros" class="btn">Conócenos más</a>
+    <a href="#nosotros.html" class="btn">Conócenos más</a>
   </header>
 
   
@@ -200,14 +301,14 @@
   
   <footer>
     <div class="footer-container">
-      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" width="200" height="200" alt="Logo Zoka Radio">
+      <img src="https://zokaradio.com/wp-content/uploads/2020/08/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio">
 
       <div class="footer-section">
         <h3>Enlaces</h3>
         <ul>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
         </ul>
       </div>
 
@@ -215,14 +316,14 @@
         <h3>Contáctanos</h3>
         <p>Email: contacto@zokaradio.com</p>
         <p>Tel: +57 3184890248</p>
-        <p>Dirección: Barrio el centro, Campoalegre-Huila</p>
+        <p>Dirección: Barrio el centro, Campoalegre - Huila</p>
       </div>
 
       <div class="footer-section">
         <h3>Síguenos</h3>
-        <a href="https://facebook.com">Facebook</a> | 
-        <a href="https://instagram.com">Instagram</a> | 
-        <a href="https://tiktok.com">TikTok</a>
+        <a href="https://www.facebook.com/share/16s7mFx3eQ/">Facebook</a> | 
+        <a href="https://www.instagram.com/zokaradio?igsh=MWwyMWE5Z2d1Y2lkMQ==">Instagram</a> | 
+        <a href="https://www.tiktok.com/@zokaradiooficial?_t=ZS-90YAVY8gUGA&_r=1">TikTok</a>
       </div>
     </div>
 
@@ -230,6 +331,17 @@
       <p>© 2025 Zoka Radio. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
