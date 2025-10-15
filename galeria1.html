@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galería - Zoka Radio</title>
   <link rel="icon" type="image/png" href="imagenes/LOGO-ZOKA-HEYDER.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -14,9 +15,17 @@
     }
 
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0a0a0a;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #ff007a, #ff9800, #ffe600);
+      background-size: 300% 300%;
+      animation: fondo 10s ease infinite;
       color: #fff;
+    }
+
+    @keyframes fondo {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* NAV */
@@ -32,78 +41,114 @@
     }
 
     nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ff004f;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ff007a;
+    }
+
+    nav .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 25px;
+      gap: 30px;
     }
 
     nav ul li a {
       text-decoration: none;
       color: white;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #ff004f;
+      color: #ff007a;
     }
 
-    h1 {
-      margin-top: 40px;
-      font-size: 2.5em;
-      color: #ff004f;
-      text-align: center;
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
     }
 
-    p {
+    /* HEADER */
+    header {
       text-align: center;
-      font-size: 1.1em;
-      color: #ccc;
+      padding: 50px 20px 20px;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #000;
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #111;
+      font-weight: 600;
     }
 
     /* CARRUSEL */
     .carrusel {
       position: relative;
-      width: 90%;
+      width: 100%;
       max-width: 900px;
       margin: 40px auto;
       overflow: hidden;
       border-radius: 15px;
-      box-shadow: 0 0 25px rgba(255, 0, 79, 0.6);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      aspect-ratio: 16 / 9;
+      background: #000;
     }
 
     .slides {
       display: flex;
       transition: transform 0.7s ease-in-out;
+      width: 100%;
+      height: 100%;
     }
 
     .slides img {
       width: 100%;
-      height: 500px;
-      object-fit: cover;
+      flex-shrink: 0;
+      object-fit: contain;
+      background-color: #000;
     }
 
+    /* BOTONES */
     .btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       border: none;
       color: white;
       font-size: 2rem;
       padding: 10px;
       cursor: pointer;
       border-radius: 50%;
+      z-index: 10;
+      transition: background 0.3s;
     }
 
     .btn:hover {
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
     }
 
     #prev {
@@ -140,6 +185,7 @@
     .footer-section h3 {
       color: #facc15;
       margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .footer-section ul {
@@ -158,7 +204,7 @@
     }
 
     .footer-section a:hover {
-      color: #ff004f;
+      color: #ff007a;
     }
 
     .footer-bottom {
@@ -171,6 +217,10 @@
     }
 
     @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
       nav ul {
         flex-direction: column;
         background: #000;
@@ -179,6 +229,16 @@
         right: 0;
         width: 100%;
         display: none;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .carrusel {
+        max-width: 100%;
       }
     }
   </style>
@@ -187,25 +247,36 @@
 <body>
 
   <nav>
-    <div class="logo">Zoka Radio</div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
+    <div class="logo">
+      <img src="imagenes/LOGO-ZOKA-HEYDER.png" alt="Logo Zoka Radio">
+      Zoka Radio
+    </div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <ul id="menu">
+      <li><a href="main.html">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="galeria.html">Galería</a></li>
-      <li><a href="contacto.html">Contáctenos</a></li>
+      <li><a href="contactenos.html">Contáctenos</a></li>
     </ul>
   </nav>
 
-  <h1>Galería</h1>
-  <p>Revive nuestros mejores momentos en Zoka Radio 📸</p>
+  <header>
+    <h1>Revive nuestros mejores momentos</h1>
+    <p>En Zoka Radio 🎵📸</p>
+  </header>
 
   <div class="carrusel">
     <div class="slides" id="slides">
-      <img src="https://i.imgur.com/jQj5oBu.jpeg" alt="Cabina de radio Zoka" />
-      <img src="https://i.imgur.com/Fwhw26A.jpeg" alt="Emisora Zoka Radio" />
-      <img src="https://i.imgur.com/Khql7Hi.jpeg" alt="Micrófono y estudio" />
-      <img src="https://i.imgur.com/1ykZlce.jpeg" alt="Ambiente musical" />
+      <img src="imagenes/uno.jpeg" alt="Cabina de radio Zoka" />
+      <img src="imagenes/dos.jpeg" alt="Emisora Zoka Radio" />
+      <img src="imagenes/tres.jpeg" alt="Micrófono y estudio" />
+      <img src="imagenes/siete.jpeg" alt="Cabina de radio Zoka" />
+      <img src="imagenes/ocho.jpeg" alt="Emisora Zoka Radio" />
+      <img src="imagenes/nueve.jpeg" alt="Micrófono y estudio" />
+      <img src="imagenes/diez.jpeg" alt="Ambiente musical" />
     </div>
+
     <button class="btn" id="prev">&#10094;</button>
     <button class="btn" id="next">&#10095;</button>
   </div>
@@ -217,9 +288,9 @@
       <div class="footer-section">
         <h3>Enlaces</h3>
         <ul>
-          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
           <li><a href="galeria.html">Galería</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
         </ul>
       </div>
 
@@ -232,9 +303,9 @@
 
       <div class="footer-section">
         <h3>Síguenos</h3>
-        <a href="https://facebook.com">Facebook</a> | 
-        <a href="https://instagram.com">Instagram</a> | 
-        <a href="https://tiktok.com">TikTok</a>
+        <a href="https://www.facebook.com/share/16s7mFx3eQ/">Facebook</a> |
+        <a href="https://www.instagram.com/zokaradio?igsh=MWwyMWE5Z2d1Y2lkMQ==">Instagram</a> |
+        <a href="https://www.tiktok.com/@zokaradiooficial?_t=ZS-90YAVY8gUGA&_r=1">TikTok</a>
       </div>
     </div>
 
@@ -248,7 +319,6 @@
     const images = document.querySelectorAll('#slides img');
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
-
     let index = 0;
 
     function showSlide(i) {
@@ -259,8 +329,13 @@
     prev.addEventListener('click', () => showSlide(index - 1));
     next.addEventListener('click', () => showSlide(index + 1));
 
-    // Carrusel automático
     setInterval(() => showSlide(index + 1), 4000);
+
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
   </script>
 
 </body>
